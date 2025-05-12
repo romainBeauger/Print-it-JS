@@ -113,6 +113,23 @@ header {
 	min-height: 470px;
 	position: relative;
 }
+
+.fleches-slider #left{
+	position: absolute;
+	top: 50%;
+	transform:translateY(-50%);
+	left: 30px;
+	cursor: pointer;
+}
+
+.fleches-slider #right{
+	position: absolute;
+	top: 50%;
+	transform:translateY(-50%);
+	right: 30px;
+	cursor: pointer;
+}
+
 .banner-img {
 	position: absolute;
 	width: 100%;
@@ -120,6 +137,7 @@ header {
 	z-index: -1;
 	object-fit: cover;
 	object-position: center;
+	transition: all 0.5s ease-in-out;
 }
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 /* Gestion des fleches du carrousel */
@@ -132,25 +150,35 @@ header {
 #banner .arrow_right {
 	right: 10px;
 }
+
+
+
+
 /* Gestion des points du carrousel */
 .dots {
 	position: absolute;
-	bottom: 40px;
+	bottom: 10px;
 	display: flex;
 }
 .dot {
-	margin-inline: 5px;
-	width: 13px;
-	height: 13px;
-	background-color: #ffffff00;
-	border: 3px solid #fff;
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
 	border-radius: 100%;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
+	background-color: rgba(31, 31, 31, 0.777);
+	border: 3px solid #dedede;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
 }
-.dot_selected {
-	background-color: #fff;
+.dots .active {
+	background-color: #ba1f6d;
 }
+
 /* Fin du code CSS pour le carousel */
+
+
+
+
 #banner p {
 	font-family: 'Roboto Slab', sans-serif;
 	font-weight: 900;
